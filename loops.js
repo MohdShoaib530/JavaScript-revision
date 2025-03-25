@@ -101,3 +101,14 @@ number == 0
   : number > 0
   ? console.log('number is greater than zero ')
   : console.log('number is negative');
+
+let arr = ['hello', 'my', 'name', 'is', 'mohd', 'shoaib'];
+for (const iter of arr) {
+  console.log(iter);
+}
+
+let arrs = [1, 2, 3, 5];
+
+const splice = arrs.splice(2, 1, 44);
+console.log(splice);
+console.log(arrs);
