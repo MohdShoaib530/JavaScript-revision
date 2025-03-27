@@ -53,7 +53,7 @@ name(); */
 const person = { name: 'John' };
 introduce.call(person); */
 
-function greet(greeting, punctuation) {
+/* function greet(greeting, punctuation) {
   console.log(greeting + ', ' + this.name + punctuation);
 }
 
@@ -63,4 +63,56 @@ greet.call(person, 'Hello', '!'); // Output: Hello, Alice!
 greet.apply(person, ['Hello', '!']);
 let newGreet = greet.bind(person, 'Hey', '!!!');
 console.log(newGreet);
-newGreet();
+newGreet(); */
+
+function sayHello() {
+  console.log('hello world');
+  console.log('my name is mohd shoaib');
+}
+
+// sayHello();
+
+function addTwoNumbs(num1, num2) {
+  let result = num1 + num2;
+  return result;
+}
+// const result = addTwoNumbs(3, 6);
+// console.log('addition', result);
+
+function substract(num1, num2) {
+  return num1 - num2;
+}
+// console.log(substract(9, 6));
+function registerUser(user = 'mohd') {
+  if (!user) {
+    console.log('please pass the user');
+    return;
+  }
+  return user + ' is registered at pw';
+}
+// const user = registerUser();
+// console.log(user);
+
+function cartBill(...numbers) {
+  console.log(numbers);
+  // took a variable totle
+  // loop through numbers and keep adding in total;
+  // return value
+
+  let total = 0;
+  for (const nums of numbers) {
+    total += nums;
+  }
+  return total;
+}
+const cartBillTotal = cartBill(33, 55, 66);
+// console.log(cartBillTotal);
+
+const user = {
+  id: 343,
+  name: 'shoaib',
+  email: 'pwskillsshoaib@gmail.com'
+};
+
+let fruits = ['banana', 'apple'];
+console.log('fruits', fruits);
