@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #id {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #f3f0f0;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <button id="color">change</button>
+    <script>
+      // color changer
+      const button = document.getElementById('color');
+      button.addEventListener('click', function () {
+        // const random
+        let vals = '0123456789ABCDEF';
+        let cons = '#';
+        let randomColor = cons;
+        for (let i = 0; i < 6; i++) {
+          let randomNum = vals[Math.floor(Math.random() * 16)];
+          randomColor += randomNum;
+          document.body.style.backgroundColor = randomColor;
+        }
+      });
+    </script>
+  </body>
+</html>

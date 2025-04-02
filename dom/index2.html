@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <!-- creating and removing elements from document -->
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+    <script>
+      // appending child
+      let title = document.createElement('p');
+      title.className = 'title';
+      title.style.color = 'green';
+      title.textContent = 'this is a title of the page';
+      document.body.appendChild(title);
+
+      // removing child
+      let ul = document.querySelector('ul');
+      console.log(ul);
+      let lists = document.querySelectorAll('li');
+      for (list of lists) {
+        ul.removeChild(list);
+      }
+    </script>
+  </body>
+</html>
